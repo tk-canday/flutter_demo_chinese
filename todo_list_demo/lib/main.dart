@@ -7,6 +7,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      // 整个 APP 的 UI 风格
+      theme: new ThemeData(
+        // 风格设置
+        primaryColor: Colors.red[600],
+      ),
       home: new LikeList(),
     );
   }
@@ -72,24 +77,6 @@ class LikeListState extends State<LikeList> {
     );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('canday 的 liked List'),
-        actions: <Widget>[
-          new IconButton(
-            icon: new Icon(Icons.list),
-            onPressed: this._goToLikedPage,
-          ),
-        ],
-      ),
-      body: new Center(
-        child: _renderBody(),
-      ),
-    );
-  }
-
   /// 添加一个路由, 并跳转到一个新的页面，这个页面都是喜欢的列表 && 可以删除此项
   void _goToLikedPage() {
     Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
@@ -107,6 +94,24 @@ class LikeListState extends State<LikeList> {
         body: new ListView(children: divided),
       );
     }));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text('all List'),
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.list),
+            onPressed: _goToLikedPage,
+          ),
+        ],
+      ),
+      body: new Center(
+        child: _renderBody(),
+      ),
+    );
   }
 }
 
