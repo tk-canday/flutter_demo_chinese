@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
+import './likedPage.dart';
+
+final rowFont = const TextStyle(fontSize: 18, color: Color(0xFFFF9000));
+
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -12,12 +16,12 @@ class MyApp extends StatelessWidget {
         // 风格设置
         primaryColor: Colors.red[600],
       ),
-      home: new LikeList(),
+      home: new AllLikePage(),
     );
   }
 }
 
-class LikeListState extends State<LikeList> {
+class AllLikePageState extends State<AllLikePage> {
   /// 所有列表
   final _likeListAll = <WordPair>[];
 
@@ -25,7 +29,6 @@ class LikeListState extends State<LikeList> {
   final _likedList = new Set<WordPair>();
 
   // 字体 style
-  final _rowFont = const TextStyle(fontSize: 18, color: Color(0xFFFF9000));
 
   /// body
   Widget _renderBody() {
@@ -55,7 +58,7 @@ class LikeListState extends State<LikeList> {
     return new ListTile(
       title: new Text(
         pair.asPascalCase,
-        style: _rowFont,
+        style: rowFont,
       ),
 
       // 每行尾部画心
@@ -77,22 +80,11 @@ class LikeListState extends State<LikeList> {
     );
   }
 
-  /// 添加一个路由, 并跳转到一个新的页面，这个页面都是喜欢的列表 && 可以删除此项
+  /// 添加一个路由, 并跳转到一个新的页面，这个页面都是喜欢的列表 && 可以点击取消喜欢
   void _goToLikedPage() {
-    Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-      // 将 likedListTile 列表实例为 ListTile 控件
-      final likedListTile = _likedList.map((v) => _buildRow(v));
-      final divided = ListTile.divideTiles(
-        context: context,
-        tiles: likedListTile,
-      ).toList();
-
-      return new Scaffold(
-        appBar: new AppBar(
-          title: new Text('liked List'),
-        ),
-        body: new ListView(children: divided),
-      );
+    Navigator.of(context).push(new MaterialPageRoute(
+      builder: (context) {
+      return new LikedPage(_likedList);
     }));
   }
 
@@ -115,7 +107,7 @@ class LikeListState extends State<LikeList> {
   }
 }
 
-class LikeList extends StatefulWidget {
+class AllLikePage extends StatefulWidget {
   @override
-  createState() => new LikeListState();
+  createState() => new AllLikePageState();
 }
