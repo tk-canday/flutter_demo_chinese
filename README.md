@@ -34,9 +34,9 @@ flutter run
   - 底部导航
 ### 2. route_demo
 > 关于路由的 demo
-![](http://wx1.sinaimg.cn/mw690/006965cFly1g0k5f851yvj30980iwmz0.jpg)
-![](http://wx3.sinaimg.cn/mw690/006965cFly1g0k5f4jc9ij30990iwq3u.jpg)
-![](http://wx1.sinaimg.cn/mw690/006965cFly1g0k5f0lqwdj30960iwmy1.jpg)
+![](http://wx1.sinaimg.cn/mw690/006965cFly1g0k5mkv1e0j30650cmab1.jpg)
+![](http://wx4.sinaimg.cn/mw690/006965cFly1g0k5mh111jj30660cm3z0.jpg)
+![](http://wx2.sinaimg.cn/mw690/006965cFly1g0k5mcpjehj30640cmdga.jpg)
 
 - run
 ```bash
