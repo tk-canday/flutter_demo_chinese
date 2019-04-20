@@ -114,7 +114,7 @@ class LayoutState extends State<LayoutPage> {
 
   // 按钮部分
   Widget _renderEntryBtns() {
-    // mock 数据，假如后端穿过来有这么几个按钮
+    // mock 数据，假如后端传过来有这么几个按钮
     final List<Map<String, String>> iconList = [
       {'type': 'call', 'label': '电话'},
       {'type': 'near_me', 'label': '导航'},
@@ -171,7 +171,7 @@ class LayoutState extends State<LayoutPage> {
     return new Container(
       height: 300,
       child: GridView.count(
-          crossAxisCount: 4, // 每行放三个格子
+          crossAxisCount: 4, // 每行放4个格子
           mainAxisSpacing: 4.0,
           crossAxisSpacing: 4.0,
           padding: const EdgeInsets.all(4.0),

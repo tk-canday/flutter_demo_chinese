@@ -17,6 +17,7 @@ flutter run
 ```
 ### 2. layout_demo
 > 关于布局的 demo
+
 ![](http://wx2.sinaimg.cn/mw690/006965cFly1g0gednf0hij307m0frad9.jpg)
 
 - run
@@ -32,8 +33,9 @@ flutter run
   - 网格布局
   - 悬浮按钮
   - 底部导航
-### 2. route_demo
+### 3. route_demo
 > 关于路由的 demo
+
 ![](http://wx1.sinaimg.cn/mw690/006965cFly1g0k5mkv1e0j30650cmab1.jpg)
 ![](http://wx4.sinaimg.cn/mw690/006965cFly1g0k5mh111jj30660cm3z0.jpg)
 ![](http://wx2.sinaimg.cn/mw690/006965cFly1g0k5mcpjehj30640cmdga.jpg)

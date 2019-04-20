@@ -7,7 +7,7 @@ class StaticRoute1 extends StatelessWidget {
     Widget build(BuildContext context) {
       return Scaffold(
       appBar: new AppBar(
-        title: new Text('静态路由页面1'),
+        title: new Text('静态路由页面 1'),
       ),
       body: Container(
         padding: EdgeInsets.only(top: 5.0),
@@ -26,7 +26,7 @@ class StaticRoute2 extends StatelessWidget {
     Widget build(BuildContext context) {
       return Scaffold(
       appBar: new AppBar(
-        title: new Text('静态路由页面1'),
+        title: new Text('静态路由页面 2'),
       ),
       body: Container(
         padding: EdgeInsets.only(top: 5.0),
